@@ -46,4 +46,7 @@ if go=="おまかせ":
 start=st.button("実行")
 if start==True:
   if position=="投手":
-    pd.read_csv("投手.csv")
+    shogo=pd.read_csv("投手称号.csv")
+  elif position=="野手":
+    shogo=pd.read_csv("野手称号.csv")
+  st.write(shogo.head())
