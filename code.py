@@ -51,4 +51,4 @@ if start==True:
     shogo=pd.read_csv("野手称号.csv")
 
 if go=="自分で":
-  st.write(shogo[target1])
+  st.write(shogo)
