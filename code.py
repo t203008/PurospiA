@@ -50,4 +50,4 @@ if start==True:
   elif position=="野手":
     shogo=pd.read_csv("野手称号.csv")
 
-st.write(shogo.target1>=sta1)
+st.write(shogo.loc[target1])
