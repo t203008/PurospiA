@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 st.title("称号")
 position=st.radio("",("投手","野手"))
-go=st.radio("称号はどう決めますか。",("","自分で","おまかせ"))
+go=st.radio("称号はどう決めますか。",("ランダム","自分で","おまかせ"))
 if go=="自分で":
   if position=="投手":
     target=st.selectbox("上げたい能力①は何ですか",["球威","制球","スタミナ","スピリッツ"])
