@@ -3,8 +3,8 @@ import pandas as pd
 st.title("称号")
 position=st.radio("",("投手","野手"))
 go=st.radio("称号はどう決めますか。",("","自分で","おまかせ"))
-if position=="投手":
-  if go=="自分で":
+if go=="自分で":
+  if position=="投手":
     target=st.selectbox("上げたい能力①は何ですか",["球威","制球","スタミナ","スピリッツ"])
     if target=="球威" or "制球" or "スタミナ":
       sta1=st.slider("この能力をどの程度上げたいですか。",min_value=0,max_value=3)
