@@ -49,7 +49,4 @@ if start==True:
     shogo=pd.read_csv("投手称号.csv")
   elif position=="野手":
     shogo=pd.read_csv("野手称号.csv")
-  if go=="自分で":
-    for row in shogo.itertuples():
-      if row[row[target1]>=int(sta1)]:
-        print(row.称号,row.星)
+shogo[shogo[target1]]
