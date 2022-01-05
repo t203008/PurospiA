@@ -45,4 +45,5 @@ if go=="おまかせ":
     
 start=st.button("実行")
 if start==True:
-  st.write("よし")
+  if position=="投手":
+    pd.read_csv("投手.csv")
