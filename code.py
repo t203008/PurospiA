@@ -11,7 +11,7 @@ if go=="自分で":
     target1=st.selectbox("上げたい能力①は何ですか",tarL1)
     if target1=="球威" or "制球" or "スタミナ":
       sta1=st.slider("この能力をどの程度上げたいですか。",min_value=0,max_value=3)
-    target2=st.selectbox("上げたい能力②は何ですか",tarL2.remove(target1))
+    target2=st.selectbox("上げたい能力②は何ですか",tarL2)
     sta2=st.slider("この能力をどの程度上げたいですか。",min_value=0,max_value=3)
     
   if go=="おまかせ":
