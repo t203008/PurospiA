@@ -3,14 +3,15 @@ import pandas as pd
 st.title("称号")
 position=st.radio("",("投手","野手"))
 go=st.radio("称号はどう決めますか。",("ランダム","自分で","おまかせ"))
-tarL=["球威","制球","スタミナ","スピリッツ"]
+tarL1=["球威","制球","スタミナ","スピリッツ"]
+tarL2=["球威","制球","スタミナ","特になし"]
 
 if go=="自分で":
   if position=="投手":
     target1=st.selectbox("上げたい能力①は何ですか",tarL)
     if target1=="球威" or "制球" or "スタミナ":
       sta1=st.slider("この能力をどの程度上げたいですか。",min_value=0,max_value=3)
-    target2=st.selectbox("上げたい能力②は何ですか",["球威","制球","スタミナ"])
+    target2=st.selectbox("上げたい能力②は何ですか",tarL2.remove(target1))
     sta2=st.slider("この能力をどの程度上げたいですか。",min_value=0,max_value=3)
     
   if go=="おまかせ":
