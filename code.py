@@ -49,5 +49,5 @@ if start==True:
     shogo=pd.read_csv("投手称号.csv")
   elif position=="野手":
     shogo=pd.read_csv("野手称号.csv")
-   if go=="自分で":
+  if go=="自分で":
     st.write(shogo[shogo.target1>=2])
