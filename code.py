@@ -50,6 +50,6 @@ if start==True:
   elif position=="野手":
     shogo=pd.read_csv("野手称号.csv")
   if go=="自分で":
-    for row in shogo.movie.itertuples():
+    for row in shogo.itertuples():
       if row[row[target1]>=sta1]:
         print(row.称号,row.星)
