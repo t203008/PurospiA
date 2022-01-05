@@ -5,7 +5,7 @@ position=st.radio("",("投手","野手"))
 go=st.radio("称号はどう決めますか。",("ランダム","自分で","おまかせ"))
 tarL1=["球威","制球","スタミナ","スピリッツ"]
 tarL2=["球威","制球","スタミナ","特になし"]
-st.write(tarL1.remove("スタミナ"))
+tarL1.remove("スタミナ")
 
 if go=="自分で":
   if position=="投手":
