@@ -18,7 +18,8 @@ if go=="自分で":
       staS=st.slider("この能力を最低どのくらい上げたいですか。",min_value=0,max_value=30,step=15)
 
 if go=="おまかせ":
-  target=st.multiselect("称号の目的は何ですか。",["同値","能力をAに","弱点克服","得意強化","スピリッツ補強"],)   st.write("選手の詳細を教えてください")
+  target=st.multiselect("称号の目的は何ですか。",["同値","能力をAに","弱点克服","得意強化","スピリッツ補強"],)
+  st.write("選手の詳細を教えてください")
   st.number_input("球威",0,100,60)   
   st.number_input("制球",0,100,60)
   st.number_input("スタミナ",0,100,60)
