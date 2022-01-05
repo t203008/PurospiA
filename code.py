@@ -52,4 +52,4 @@ if start==True:
   if go=="自分で":
     for row in shogo.movie.itertuples():
       if row[row[target1]>=sta1]:
-        print(row.,row.☆)
+        print(row.称号,row.星)
