@@ -50,4 +50,5 @@ if start==True:
   elif position=="野手":
     shogo=pd.read_csv("野手称号.csv")
 
-st.write(shogo.loc[target1])
+if go=="自分で":
+  st.write(shogo[target1])
