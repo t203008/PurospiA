@@ -64,8 +64,7 @@ if start==True:
     st.write("称号一覧")
     st.write(star)
     per=pd.DataFrame(data={"星":["☆1","☆2","☆3","☆4"],
-                    "数":[1,4,5,5],
-                    "確率":[1/3,4,4,4]})
+                    "数":[1,4,5,5]})
     per=per.set_index("星")
     st.write(per)
     
