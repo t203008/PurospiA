@@ -30,7 +30,6 @@ if go=="自分で":
     if target1=="ミート" or target1=="パワー" or target1=="走力":
       sta1=st.slider("この能力を最低どのくらい上げたいですか。",min_value=-1,max_value=3,step=1)
       target2=st.selectbox("上げたい能力②は何ですか",TARl2)
-      two=TarL1.index(target2)
       sta2=st.slider("この能力をどの程度上げたいですか。",min_value=-1,max_value=3)
     else:
       sta1=st.slider("この能力を最低どのくらい上げたいですか。",min_value=0,max_value=30,step=15)
