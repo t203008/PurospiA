@@ -49,4 +49,7 @@ if start==True:
     shogo=pd.read_csv("投手称号.csv")
   elif position=="野手":
     shogo=pd.read_csv("野手称号.csv")
-  st.write(shogo[target1])
+  shogo.球威
+#  for row in shogo.itertuples():
+#    if row[] and row.budget <=100000: 
+#        print(row.movie_title, row.director_name)
