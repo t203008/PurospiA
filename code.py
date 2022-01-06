@@ -63,3 +63,8 @@ if start==True:
       star=shogo[(shogo[target1]>=sta1)&(shogo[target2]>=sta2)]
     st.write("称号一覧")
     st.write(star)
+    per=pd.DataFrame({"星":[1,2,3,4]}
+                    "該当数":[1,4,5,5]
+                    "確率":[1/3,4,4,4])
+    
+    
