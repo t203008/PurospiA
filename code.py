@@ -50,5 +50,5 @@ if go=="おまかせ":
 start=st.button("実行")
 if start==True:
   for row in shogo.itertuples():
-    if row.球威>=2: 
+    if row["球威"]>=2: 
         st.write(row.称号)
