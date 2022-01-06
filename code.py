@@ -71,6 +71,11 @@ if start==True:
                               star[star["星"]==4].count().星]})
     per=per.set_index("星")
     st.write(per)
-    st.write(40*star[star["星"]==1].count().星/5 + 35*star[star["星"]==2].count().星/5 + 15*star[star["星"]==3].count().星/5 + 10*star[star["星"]==4].count().星/5)
-    main=pd.DataFrame(data={"枚数":["0枚","1枚","2枚","3枚","4枚","5枚"]})
+    main=pd.DataFrame(data={"枚数":["0枚","1枚","2枚","3枚","4枚","5枚"],
+                           "確率":[40*star[star["星"]==1].count().星/5 + 35*star[star["星"]==2].count().星/5 + 15*star[star["星"]==3].count().星/5 + 10*star[star["星"]==4].count().星/5,
+                                25*star[star["星"]==1].count().星/5 + 35*star[star["星"]==2].count().星/5 + 25*star[star["星"]==3].count().星/5 + 15*star[star["星"]==4].count().星/5,
+                                20*star[star["星"]==1].count().星/5 + 30*star[star["星"]==2].count().星/5 + 30*star[star["星"]==3].count().星/5 + 20*star[star["星"]==4].count().星/5,
+                                10*star[star["星"]==1].count().星/5 + 30*star[star["星"]==2].count().星/5 + 35*star[star["星"]==3].count().星/5 + 25*star[star["星"]==4].count().星/5,
+                                0*star[star["星"]==1].count().星/5 + 15*star[star["星"]==2].count().星/5 + 55*star[star["星"]==3].count().星/5 + 30*star[star["星"]==4].count().星/5,
+                                0*star[star["星"]==1].count().星/5 + 0*star[star["星"]==2].count().星/5 + 60*star[star["星"]==3].count().星/5 + 40*star[star["星"]==4].count().星/5]})
     
