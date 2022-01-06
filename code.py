@@ -69,7 +69,11 @@ if start==True:
     st.write(star[star["星"]==4].count())
     
     
-    per=pd.DataFrame(data={"星":["☆1","☆2","☆3","☆4"]})
+    per=pd.DataFrame(data={"星":["☆1","☆2","☆3","☆4"],
+                          "数":[star[star["星"]==1].count().星,
+                              star[star["星"]==2].count().星,
+                              star[star["星"]==3].count().星,
+                              star[star["星"]==4].count().星]})
     per=per.set_index("星")
     st.write(per)
     
