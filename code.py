@@ -80,4 +80,5 @@ if start==True:
                                  0*star[star["星"]==1].count().星/5 + 0*star[star["星"]==2].count().星/7 + 60*star[star["星"]==3].count().星/7 + 40*star[star["星"]==4].count().星/5]})
     main=main.set_index("枚数")
     st.write("称号の極意書の枚数と確率変化")
-    st.write(main.plot)
+    st.write(main)
+    st.pyplot(main.plot)
