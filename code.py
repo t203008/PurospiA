@@ -55,5 +55,4 @@ if go=="おまかせ":
 start=st.button("実行")
 if start==True:
   shogo.fillna(0,inplace=True)
-  st.write(shogo)
   shogo[shogo[target1]>=sta1]
