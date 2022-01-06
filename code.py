@@ -63,6 +63,8 @@ if start==True:
       star=shogo[(shogo[target1]>=sta1)&(shogo[target2]>=sta2)]
     st.write("称号一覧")
     st.write(star)
+    st.write(star[["星"]])
+    
     
     per=pd.DataFrame(data={"星":["☆1","☆2","☆3","☆4"]})
     per=per.set_index("星")
