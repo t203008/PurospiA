@@ -68,7 +68,11 @@ if start==True:
                           "数":[star[star["星"]==1].count().星,
                               star[star["星"]==2].count().星,
                               star[star["星"]==3].count().星,
-                              star[star["星"]==4].count().星]})
+                              star[star["星"]==4].count().星],
+                          "%":[100*star[star["星"]==1].count().星/5,
+                              100*star[star["星"]==2].count().星/5,
+                              100*star[star["星"]==3].count().星/5,
+                              100*star[star["星"]==4].count().星/5]})
     per=per.set_index("星")
     st.write(per)
     
