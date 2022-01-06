@@ -27,9 +27,7 @@ if go=="自分で":
   if position=="野手":
     shogo=pd.read_csv("野手称号.csv")
     target1=st.selectbox("上げたい能力①は何ですか",TARl1)
-    one=tarL1.index(target1)
     if target1=="ミート" or target1=="パワー" or target1=="走力":
-      TARl2.remove(target1)
       sta1=st.slider("この能力を最低どのくらい上げたいですか。",min_value=-1,max_value=3,step=1)
       target2=st.selectbox("上げたい能力②は何ですか",TARl2)
       two=TarL1.index(target2)
