@@ -54,5 +54,4 @@ if go=="おまかせ":
     
 start=st.button("実行")
 if start==True:
-  st.write(one)
-  st.write(two)
+  shogo[shogo[target1]>=sta1]
