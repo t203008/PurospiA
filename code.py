@@ -12,7 +12,6 @@ TARl2=["ミート","パワー","走力","特になし"]
 if go=="自分で":
   if position=="投手":
     shogo=pd.read_csv("投手称号.csv")
-    shogo.fillna(0)
     target1=st.selectbox("上げたい能力①は何ですか",tarL1)
     one=tarL1.index(target1)
     if target1=="球威" or target1=="制球" or target1=="スタミナ":
@@ -26,7 +25,6 @@ if go=="自分で":
       
   if position=="野手":
     shogo=pd.read_csv("野手称号.csv")
-    shogo.fillna(0)
     target1=st.selectbox("上げたい能力①は何ですか",TARl1)
     one=tarL1.index(target1)
     if target1=="ミート" or target1=="パワー" or target1=="走力":
@@ -41,7 +39,6 @@ if go=="自分で":
 if go=="おまかせ":
   if position=="投手":
     shogo=pd.read_csv("投手称号.csv")
-    shogo.fillna(0)
     target=st.multiselect("称号の目的は何ですか。",["同値","能力をAに","弱点克服","得意強化","スピリッツ補強"],)
     st.write("選手の詳細を教えてください")
     st.number_input("球威",0,100,60)   
@@ -49,7 +46,6 @@ if go=="おまかせ":
     st.number_input("スタミナ",0,100,60)
   else:
     shogo=pd.read_csv("野手称号.csv")
-    shogo.fillna(0)
     target=st.multiselect("称号の目的は何ですか。",["同値","能力をAに","弱点克服","得意強化","スピリッツ補強"],)
     st.write("選手の詳細を教えてください")
     st.number_input("ミート",0,100,60)   
@@ -58,4 +54,6 @@ if go=="おまかせ":
     
 start=st.button("実行")
 if start==True:
+  shogo.fillna(0)
+  st.write(shogo)
   shogo[shogo[target1]>=sta1]
