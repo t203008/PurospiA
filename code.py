@@ -34,7 +34,7 @@ if go=="自分で":
       two=TarL1.index(target2)
       sta2=st.slider("この能力をどの程度上げたいですか。",min_value=0,max_value=3)
     else:
-      staS=st.slider("この能力を最低どのくらい上げたいですか。",min_value=0,max_value=30,step=15)
+      sta1=st.slider("この能力を最低どのくらい上げたいですか。",min_value=0,max_value=30,step=15)
 
 if go=="おまかせ":
   if position=="投手":
