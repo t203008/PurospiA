@@ -55,11 +55,11 @@ if go=="自分で":
     
 start=st.button("実行")
 if start==True:
-  shogo.fillna(0,inplace=True)
+  if go=="おまかせ":
+      st.write("現在未実装です")
   if go=="自分で":
+    shogo.fillna(0,inplace=True)
     if target1=="スピリッツ" or target2=="特になし":
       st.write(shogo[shogo[target1]>=sta1])
   else:
     st.write(shogo[(shogo[target1]>=sta1)&(shogo[target2]>=sta2)])
-  if go=="おまかせ":
-    st.write("未実装です")
