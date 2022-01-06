@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 st.title("称号")
 position=st.radio("",("投手","野手"))
-go=st.radio("称号はどう決めますか。",("ランダム","自分で","おまかせ"))
+go=st.radio("称号はどう決めますか。",("自分で","おまかせ"))
 st.write("※おまかせは現在使えません")
 tarL1=["球威","制球","スタミナ","スピリッツ"]
 tarL2=["球威","制球","スタミナ","特になし"]
@@ -81,6 +81,3 @@ if start==True:
     main=main.set_index("枚数")
     st.write("称号の極意書の枚数と確率変化")
     st.write(main)
-  if go=="ランダム":
-    shogo.fillna(0,inplace=True)
-    shogo.iloc[randam.randint(0,25),:]
