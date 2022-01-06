@@ -16,12 +16,12 @@ if go=="自分で":
     one=tarL1.index(target1)
     if target1=="球威" or target1=="制球" or target1=="スタミナ":
       tarL2.remove(target1)
-      sta1=st.slider("この能力を最低どのくらい上げたいですか。",min_value=0,max_value=3,step=1)
+      sta1=st.slider("この能力を最低どのくらい上げたいですか。",min_value=-1,max_value=3,step=1)
       target2=st.selectbox("上げたい能力②は何ですか",tarL2)
       two=TarL2.index(target2)
-      sta2=st.slider("この能力をどの程度上げたいですか。",min_value=0,max_value=3)
+      sta2=st.slider("この能力をどの程度上げたいですか。",min_value=-1,max_value=3)
     else:
-      staS=st.slider("この能力を最低どのくらい上げたいですか。",min_value=0,max_value=30,step=15)
+      sta1=st.slider("この能力を最低どのくらい上げたいですか。",min_value=0,max_value=30,step=15)
       
   if position=="野手":
     shogo=pd.read_csv("野手称号.csv")
@@ -29,10 +29,10 @@ if go=="自分で":
     one=tarL1.index(target1)
     if target1=="ミート" or target1=="パワー" or target1=="走力":
       TARl2.remove(target1)
-      sta1=st.slider("この能力を最低どのくらい上げたいですか。",min_value=0,max_value=3,step=1)
+      sta1=st.slider("この能力を最低どのくらい上げたいですか。",min_value=-1,max_value=3,step=1)
       target2=st.selectbox("上げたい能力②は何ですか",TARl2)
       two=TarL1.index(target2)
-      sta2=st.slider("この能力をどの程度上げたいですか。",min_value=0,max_value=3)
+      sta2=st.slider("この能力をどの程度上げたいですか。",min_value=-1,max_value=3)
     else:
       sta1=st.slider("この能力を最低どのくらい上げたいですか。",min_value=0,max_value=30,step=15)
 
@@ -55,4 +55,5 @@ if go=="おまかせ":
 start=st.button("実行")
 if start==True:
   shogo.fillna(0,inplace=True)
+  if target1
   shogo[shogo[target1]>=sta1]
