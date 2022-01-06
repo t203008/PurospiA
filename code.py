@@ -64,3 +64,4 @@ if start==True:
     st.write("称号一覧")
     st.write(star)
     per = star.pivot_table(index="星")
+　　st.write(per)
