@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import matplotlib.pyplot as plt
 st.title("称号")
 position=st.radio("",("投手","野手"))
 go=st.radio("称号はどう決めますか。",("ランダム","自分で","おまかせ"))
@@ -81,4 +82,4 @@ if start==True:
     main=main.set_index("枚数")
     st.write("称号の極意書の枚数と確率変化")
     st.write(main)
-    st.pyplot(main.plot)
+    st.plotly_chart(main.plot())
