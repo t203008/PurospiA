@@ -5,6 +5,7 @@ position=st.radio("",("投手","野手"))
 go=st.radio("称号はどう決めますか。",("ランダム","自分で","おまかせ"))
 tarL1=["球威","制球","スタミナ","スピリッツ"]
 tarL2=["球威","制球","スタミナ","特になし"]
+TarL2=["球威","制球","スタミナ","特になし"]
 TARl1=["ミート","パワー","走力","スピリッツ"]
 TARl2=["ミート","パワー","走力","特になし"]
 
@@ -17,7 +18,7 @@ if go=="自分で":
       tarL2.remove(target1)
       sta1=st.slider("この能力を最低どのくらい上げたいですか。",min_value=0,max_value=3,step=1)
       target2=st.selectbox("上げたい能力②は何ですか",tarL2)
-      two=tarL2.index(target2)
+      two=TarL2.index(target2)
       sta2=st.slider("この能力をどの程度上げたいですか。",min_value=0,max_value=3)
     else:
       staS=st.slider("この能力を最低どのくらい上げたいですか。",min_value=0,max_value=30,step=15)
@@ -30,7 +31,7 @@ if go=="自分で":
       TARl2.remove(target1)
       sta1=st.slider("この能力を最低どのくらい上げたいですか。",min_value=0,max_value=3,step=1)
       target2=st.selectbox("上げたい能力②は何ですか",TARl2)
-      two=tarL1.index(target2)
+      two=TarL1.index(target2)
       sta2=st.slider("この能力をどの程度上げたいですか。",min_value=0,max_value=3)
     else:
       staS=st.slider("この能力を最低どのくらい上げたいですか。",min_value=0,max_value=30,step=15)
@@ -52,7 +53,6 @@ if go=="おまかせ":
     st.number_input("走力",0,100,60)
     
 start=st.button("実行")
-tarL2=["球威","制球","スタミナ","特になし"]
 if start==True:
   st.write(one)
   st.write(two)
