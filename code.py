@@ -69,8 +69,8 @@ if start==True:
                               star[star["星"]==2].count().星,
                               star[star["星"]==3].count().星,
                               star[star["星"]==4].count().星]})
-    
     per=per.set_index("星")
     st.write(per)
-    
+    st.write(40*star[star["星"]==1].count().星/5 + 35*star[star["星"]==2].count().星/5 + 15*star[star["星"]==3].count().星/5 + 10*star[star["星"]==4].count().星/5)
+    main=pd.DataFrame(data={"枚数":["0枚","1枚","2枚","3枚","4枚","5枚"]})
     
