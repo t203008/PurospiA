@@ -3,6 +3,7 @@ import pandas as pd
 st.title("称号")
 position=st.radio("",("投手","野手"))
 go=st.radio("称号はどう決めますか。",("ランダム","自分で","おまかせ"))
+st.write("※おまかせは現在使えません")
 tarL1=["球威","制球","スタミナ","スピリッツ"]
 tarL2=["球威","制球","スタミナ","特になし"]
 TarL2=["球威","制球","スタミナ","特になし"]
@@ -36,14 +37,14 @@ if go=="自分で":
     else:
       sta1=st.slider("この能力を最低どのくらい上げたいですか。",min_value=0,max_value=30,step=15)
 
-if go=="おまかせ":
-  if position=="投手":
-    shogo=pd.read_csv("投手称号.csv")
-    target=st.multiselect("称号の目的は何ですか。",["同値","能力をAに","弱点克服","得意強化","スピリッツ補強"],)
-    st.write("選手の詳細を教えてください")
-    st.number_input("球威",0,100,60)   
-    st.number_input("制球",0,100,60)
-    st.number_input("スタミナ",0,100,60)
+#if go=="おまかせ":
+#  if position=="投手":
+#    shogo=pd.read_csv("投手称号.csv")
+#    target=st.multiselect("称号の目的は何ですか。",["同値","能力をAに","弱点克服","得意強化","スピリッツ補強"],)
+#    st.write("選手の詳細を教えてください")
+#    st.number_input("球威",0,100,60)   
+#    st.number_input("制球",0,100,60)
+#    st.number_input("スタミナ",0,100,60)
   else:
     shogo=pd.read_csv("野手称号.csv")
     target=st.multiselect("称号の目的は何ですか。",["同値","能力をAに","弱点克服","得意強化","スピリッツ補強"],)
@@ -55,7 +56,10 @@ if go=="おまかせ":
 start=st.button("実行")
 if start==True:
   shogo.fillna(0,inplace=True)
-  if target1=="スピリッツ" or target2=="特になし":
-    st.write(shogo[shogo[target1]>=sta1])
+  if go=="自分で":
+    if target1=="スピリッツ" or target2=="特になし":
+      st.write(shogo[shogo[target1]>=sta1])
   else:
     st.write(shogo[(shogo[target1]>=sta1)&(shogo[target2]>=sta2)])
+  if go=="おまかせ":
+    st.write("未実装です")
