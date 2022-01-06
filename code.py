@@ -63,12 +63,8 @@ if start==True:
       star=shogo[(shogo[target1]>=sta1)&(shogo[target2]>=sta2)]
     st.write("称号一覧")
     st.write(star)
-    st.write(star[star["星"]==1].count().星)
-    st.write(star[star["星"]==2].count())
-    st.write(star[star["星"]==3].count())
-    st.write(star[star["星"]==4].count())
     
-    
+    st.wirte("☆毎の称号数") 
     per=pd.DataFrame(data={"星":["☆1","☆2","☆3","☆4"],
                           "数":[star[star["星"]==1].count().星,
                               star[star["星"]==2].count().星,
