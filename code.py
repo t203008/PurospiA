@@ -78,6 +78,6 @@ if start==True:
                                 10*star[star["星"]==1].count().星/5 + 30*star[star["星"]==2].count().星/5 + 35*star[star["星"]==3].count().星/5 + 25*star[star["星"]==4].count().星/5,
                                 0*star[star["星"]==1].count().星/5 + 15*star[star["星"]==2].count().星/5 + 55*star[star["星"]==3].count().星/5 + 30*star[star["星"]==4].count().星/5,
                                  0*star[star["星"]==1].count().星/5 + 0*star[star["星"]==2].count().星/5 + 60*star[star["星"]==3].count().星/5 + 40*star[star["星"]==4].count().星/5]})
-    per=per.set_index("枚数")
+    main=main.set_index("枚数")
     st.write("称号の極意書の枚数と確率変化")
     st.write(main)
