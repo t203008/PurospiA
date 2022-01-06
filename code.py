@@ -63,15 +63,15 @@ if start==True:
       star=shogo[(shogo[target1]>=sta1)&(shogo[target2]>=sta2)]
     st.write("称号一覧")
     st.write(star)
-    st.write("☆毎の称号数")
+    st.write("☆毎の称号数、確率")
     per=pd.DataFrame(data={"星":["☆1","☆2","☆3","☆4"],
                           "数":[star[star["星"]==1].count().星,
                               star[star["星"]==2].count().星,
                               star[star["星"]==3].count().星,
                               star[star["星"]==4].count().星],
                           "%":[100*star[star["星"]==1].count().星/5,
-                              100*star[star["星"]==2].count().星/5,
-                              100*star[star["星"]==3].count().星/5,
+                              100*star[star["星"]==2].count().星/7,
+                              100*star[star["星"]==3].count().星/7,
                               100*star[star["星"]==4].count().星/5]})
     per=per.set_index("星")
     st.write(per)
