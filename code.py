@@ -52,6 +52,7 @@ if go=="おまかせ":
     st.number_input("走力",0,100,60)
     
 start=st.button("実行")
+tarL2=["球威","制球","スタミナ","特になし"]
 if start==True:
   st.write(one)
   st.write(two)
