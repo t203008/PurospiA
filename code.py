@@ -63,5 +63,5 @@ if start==True:
       star=shogo[(shogo[target1]>=sta1)&(shogo[target2]>=sta2)]
     st.write("称号一覧")
     st.write(star)
-    per = star.pivot_table(index="星",aggfunc="count")
+    per = star.pivot_table(index="星",valuies="スピリッツ",aggfunc="count")
     st.write(per)
