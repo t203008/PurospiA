@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
 st.title("称号")
 position=st.radio("",("投手","野手"))
 go=st.radio("称号はどう決めますか。",("ランダム","自分で","おまかせ"))
