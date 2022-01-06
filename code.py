@@ -58,4 +58,4 @@ if start==True:
   if target1=="スピリッツ" or target2=="特になし":
     st.write(shogo[shogo[target1]>=sta1])
   else:
-    st.write((shogo[(shogo[target1]>=sta1)&(shogo[target2]>=sta2)])
+    st.write(shogo[(shogo[target1]>=sta1)&(shogo[target2]>=sta2)])
