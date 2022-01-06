@@ -66,5 +66,6 @@ if start==True:
     per=pd.DataFrame(data={"星":[1,2,3,4],
                     "該当数":[1,4,5,5],
                     "確率":[1/3,4,4,4]})
+    st.write(per)
     
     
