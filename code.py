@@ -55,5 +55,7 @@ if go=="おまかせ":
 start=st.button("実行")
 if start==True:
   shogo.fillna(0,inplace=True)
-  if target1
-  shogo[shogo[target1]>=sta1]
+  if target1=="スピリッツ" or target2=="特になし":
+    st.write(shogo[shogo[target1]>=sta1])
+  else:
+    st.write((shogo[shogo[target1]>=sta1)|(shogo[shogo[target2]>=sta2)])
