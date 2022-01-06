@@ -12,10 +12,12 @@ if go=="自分で":
   if position=="投手":
     shogo=pd.read_csv("投手称号.csv")
     target1=st.selectbox("上げたい能力①は何ですか",tarL1)
+    one=tarL1.index(target1)
     if target1=="球威" or target1=="制球" or target1=="スタミナ":
       tarL2.remove(target1)
       sta1=st.slider("この能力を最低どのくらい上げたいですか。",min_value=0,max_value=3,step=1)
       target2=st.selectbox("上げたい能力②は何ですか",tarL2)
+      two=tarL2.index(target2)
       sta2=st.slider("この能力をどの程度上げたいですか。",min_value=0,max_value=3)
     else:
       staS=st.slider("この能力を最低どのくらい上げたいですか。",min_value=0,max_value=30,step=15)
@@ -23,10 +25,12 @@ if go=="自分で":
   if position=="野手":
     shogo=pd.read_csv("野手称号.csv")
     target1=st.selectbox("上げたい能力①は何ですか",TARl1)
+    one=tarL1.index(target1)
     if target1=="ミート" or target1=="パワー" or target1=="走力":
       TARl2.remove(target1)
       sta1=st.slider("この能力を最低どのくらい上げたいですか。",min_value=0,max_value=3,step=1)
       target2=st.selectbox("上げたい能力②は何ですか",TARl2)
+      two=tarL1.index(target2)
       sta2=st.slider("この能力をどの程度上げたいですか。",min_value=0,max_value=3)
     else:
       staS=st.slider("この能力を最低どのくらい上げたいですか。",min_value=0,max_value=30,step=15)
@@ -49,6 +53,5 @@ if go=="おまかせ":
     
 start=st.button("実行")
 if start==True:
-  for row in shogo.itertuples():
-    if row["球威"]>=2: 
-        st.write(row.称号)
+  st.write(one)
+  st.write(two)
